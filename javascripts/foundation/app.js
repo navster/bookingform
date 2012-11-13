@@ -45,16 +45,74 @@
       if(d >= 100 && d <= 188){
         //$('#radio1').attr('disabled','disabled');
         //$('#radio2').prop('disabled',true);
+        $('#radio1').parent().show();
+        $('#radio2').parent().show();
+        $('#radio3').parent().show();
         $('#radio1').parent().hide();
+        $('#radio2').parent().hide();
         console.log('change now');
       }
+      else if(d > 188 && d <= 374){
+        $('#radio1').parent().show();
+        $('#radio2').parent().show();
+        $('#radio3').parent().show();
+      }
+      else if(d > 374){
+        alert('The maximum occupancy is 374')
+        $('#radio1').parent().hide();
+        $('#radio2').parent().hide();
+        $('#radio3').parent().hide();
+      }
+      else if(d > 40 && d <= 90){
+        $('#radio1').parent().show();
+        $('#radio2').parent().show();
+        $('#radio3').parent().show();
+        $('#radio3').parent().hide();
+      }
+      else if(d > 90 && d <= 96){
+        $('#radio1').parent().show();
+        $('#radio2').parent().show();
+        $('#radio3').parent().show();
+        $('#radio1').parent().hide();
+        $('#radio3').parent().hide();
+      }
+      else if(d < 40){
+        alert('The minimum occupancy is 40')
+        $('#radio1').parent().hide();
+        $('#radio2').parent().hide();
+        $('#radio3').parent().hide();
+      }
     } else {
-      alert('this is not a number');
+      alert('This is not a number');
+      $('#radio1').parent().show();
+      $('#radio2').parent().show();
+      $('#radio3').parent().show();
     }
   });
 
   function isNumber(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
   }
+  
+  $('.datepicker').datepicker()
+
+  $('#calendar').fullCalendar({
+    events: [
+        {
+            title  : 'Unavailable',
+            start  : '2012-11-16'
+        },
+        {
+            title  : 'Unavailable',
+            start  : '2012-11-05',
+            end    : '2012-11-07'
+        },
+        {
+            title  : 'seminar',
+            start  : '2012-11-15 12:30:00',
+            allDay : false // will make the time show
+        }
+    ]
+});
 
 })(jQuery, this);

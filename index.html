@@ -14,7 +14,8 @@
 
 	<!-- Included CSS Files -->
 	<link rel="stylesheet" href="stylesheets/app.css">
-
+  <link rel='stylesheet' type='text/css' href='fullcalendar/fullcalendar/fullcalendar.css' />
+  <link rel='stylesheet' type='text/css' href='datepicker/css/datepicker.css' />
 	<script src="javascripts/foundation/modernizr.foundation.js"></script>
 
 </head>
@@ -41,15 +42,11 @@
         </div>
       </div>
       <div class='row'>
-        <div class='four columns'>
-          <label>Est Numbers</label>
-          <input id='estnumbers' type='text' class='twelve' />
-        </div>
-        <div class='four columns'>
+        <div class='six columns'>
           <label>Phone</label>
           <input type='text' class='twelve' />
         </div>
-        <div class='four columns'>
+        <div class='six columns'>
           <label>Fax</label>
           <input type='text' class='twelve' />
         </div>
@@ -107,8 +104,15 @@
       </div>
       <div class='six columns'>
         <select style="display:none;" id="customDropdown">
-          <option SELECTED>Year 8</option>
+          <option SELECTED>Year 5</option>
+          <option>Year 6</option>
+          <option>Year 7</option>
+          <option>Year 8</option>
           <option>Year 9</option>
+          <option>Year 10</option>
+          <option>Year 11</option>
+          <option>Year 12</option>
+          <option>Year 13</option>
         </select>
         <div class="custom dropdown">
           <a href="#" class="current">
@@ -123,15 +127,19 @@
       </div>
     </div>
     </fieldset>
-
     <fieldset>
       <legend>Booking Details</legend>
       <div class='row'>
+	<div class='eight columns'><label>Estimated Numbers: Note that this will affect which villages are available for booking</label>
+	</div>
+        <div class='four columns'><input id='estnumbers' type='text' class='three' /></div>
+	</div>
+	<div class='row'>
           <div class='three columns'><label>Our group is booked into the:</label></div>
           <div class='three columns'><label for="radio1"><input name="radio1" type="radio" id="radio1" style="display:none;"><span class="custom radio"></span> GG Village</label></div>
           <div class='three columns'><label for="radio2"><input name="radio1" type="radio" id="radio2" style="display:none;"><span class="custom radio checked"></span> HL Village</label></div>
           <div class='three columns'><label for="radio3"><input name="radio1" type="radio" id="radio3" style="display:none;"><span class="custom radio"></span> Main Lodge</label></div>
-      </div>
+  </div>
       <div class='row'>
         <div class='four columns'>
           <div class='row'>
@@ -170,11 +178,17 @@
           </div>
         </div>
       </div>
-
       </div>
     </fieldset>
    </form>
-</div></div>
+   <div class='row'>
+   <div id='calendar'></div></div>
+   <div class='row'>
+              <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+              <input class="span2" size="16" type="text" value="12-02-2012">
+              <span class="add-on"><i class="icon-th"></i></span>
+              </div>
+    </div>
 	<!-- Included JS Files (Uncompressed) -->
 	<script src="javascripts/foundation/jquery.js"></script>
 	<script src="javascripts/foundation/jquery.cookie.js"></script>
@@ -197,6 +211,8 @@
 	<script src="javascripts/foundation/jquery.placeholder.js"></script>
 
   <!-- Application Javascript, safe to override -->
+  <script type='text/javascript' src='fullcalendar/fullcalendar/fullcalendar.js'></script>
+  <script type='text/javascript' src='datepicker/js/bootstrap-datepicker.js'></script>
   <script src="javascripts/foundation/app.js"></script>
 </body>
 </html>
