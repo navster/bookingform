@@ -23,135 +23,178 @@
 	<div class="row">
 		<div class="twelve columns">
 			<h2>Welcome to Foundation</h2>
-			<p>This is version 3.2.0.</p>
-			<hr />
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="eight columns">
-			<h3>The Grid</h3>
-
-			<!-- Grid Example -->
-			<div class="row">
-				<div class="twelve columns">
-					<div class="panel">
-						<p>This is a twelve column section in a row. Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="six columns">
-					<div class="panel">
-						<p>Six columns</p>
-					</div>
-				</div>
-				<div class="six columns">
-					<div class="panel">
-						<p>Six columns</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="four columns">
-					<div class="panel">
-						<p>Four columns</p>
-					</div>
-				</div>
-				<div class="four columns">
-					<div class="panel">
-						<p>Four columns</p>
-					</div>
-				</div>
-				<div class="four columns">
-					<div class="panel">
-						<p>Four columns</p>
-					</div>
-				</div>
-			</div>
-
-			<h3>Tabs</h3>
-			<dl class="tabs">
-				<dd class="active"><a href="#simple1">Simple Tab 1</a></dd>
-				<dd><a href="#simple2">Simple Tab 2</a></dd>
-				<dd><a href="#simple3">Simple Tab 3</a></dd>
-			</dl>
-
-			<ul class="tabs-content">
-				<li class="active" id="simple1Tab">This is simple tab 1's content. Pretty neat, huh?</li>
-				<li id="simple2Tab">This is simple tab 2's content. Now you see it!</li>
-				<li id="simple3Tab">This is simple tab 3's content. It's, you know...okay.</li>
-			</ul>
-
-			<h3>Buttons</h3>
-
-      <div class="row">
-        <div class="six columns">
-          <p><a href="#" class="small button">Small Button</a></p>
-          <p><a href="#" class="button">Medium Button</a></p>
-          <p><a href="#" class="large button">Large Button</a></p>
+<div class='row'><div class='twelve columns'>
+  <form class="custom">
+    <fieldset>
+      <legend>Group Details</legend>
+      <div class='row'>
+        <div class='six columns'>
+          <label>Name of Group</label>
+          <input type='text' class='twelve' />
         </div>
-        <div class="six columns">
-          <p><a href="#" class="small alert button">Small Alert Button</a></p>
-          <p><a href="#" class="success button">Medium Success Button</a></p>
-          <p><a href="#" class="large secondary button">Large Secondary Button</a></p>
+        <div class='six columns'>
+          <label>Name of organiser</label>
+          <input type='text' class='twelve' />
         </div>
       </div>
-		</div>
+      <div class='row'>
+        <div class='four columns'>
+          <label>Est Numbers</label>
+          <input id='estnumbers' type='text' class='twelve' />
+        </div>
+        <div class='four columns'>
+          <label>Phone</label>
+          <input type='text' class='twelve' />
+        </div>
+        <div class='four columns'>
+          <label>Fax</label>
+          <input type='text' class='twelve' />
+        </div>
+      </div>
+      <div class='row'>
+        <div class='twelve columns'>
+          <label>Address</label>
+          <input type='text' class='twelve' />
+        </div>
+      </div>
+      <div class='row'>
+        <div class='six columns'>
+          <label>Mobile</label>
+          <input type='text' class='twelve' />
+        </div>
+        <div class='six columns'>
+          <label>Email</label>
+          <input type='text' class='twelve'
+        </div>
+      </div>
+    </fieldset>
 
-		<div class="four columns">
-			<h4>Getting Started</h4>
-			<p>We're stoked you want to try Foundation! To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+    <fieldset>
+      <legend>School Details</legend>
 
-			<h4>Other Resources</h4>
-			<p>Once you've exhausted the fun in this document, you should check out:</p>
-			<ul class="disc">
-				<li><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</li>
-				<li><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</li>
-				<li><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</li>
-			</ul>
-		</div>
-	</div>
+    <div class="row">
+      <div class="six columns">
+          <label>School Name</label>
+          <input type="text">
+      </div>
+      <div class="six columns">
+          <label>School ID</label>
+          <input type="text">
+      </div>
+    </div>
+    <div class='row'>
+      <div class='six columns'
+        <!-- Custom Selects -->
+        <select style="display:none;" id="customDropdown">
+          <option SELECTED>Primary</option>
+          <option>Secondary</option>
+          <option>Intermediate</option>
+        </select>
+        <div class="custom dropdown">
+          <a href="#" class="current">
+            School Type
+          </a>
+          <a href="#" class="selector"></a>
+          <ul>
+            <li>Primary</li>
+            <li>Secondary</li>
+            <li>Intermediate</li>
+          </ul>
+        </div>
+      </div>
+      <div class='six columns'>
+        <select style="display:none;" id="customDropdown">
+          <option SELECTED>Year 8</option>
+          <option>Year 9</option>
+        </select>
+        <div class="custom dropdown">
+          <a href="#" class="current">
+            Year Group
+          </a>
+          <a href="#" class="selector"></a>
+          <ul>
+            <li>Year 8</li>
+            <li>Year 9</li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+    </fieldset>
 
+    <fieldset>
+      <legend>Booking Details</legend>
+      <div class='row'>
+          <div class='three columns'><label>Our group is booked into the:</label></div>
+          <div class='three columns'><label for="radio1"><input name="radio1" type="radio" id="radio1" style="display:none;"><span class="custom radio"></span> GG Village</label></div>
+          <div class='three columns'><label for="radio2"><input name="radio1" type="radio" id="radio2" style="display:none;"><span class="custom radio checked"></span> HL Village</label></div>
+          <div class='three columns'><label for="radio3"><input name="radio1" type="radio" id="radio3" style="display:none;"><span class="custom radio"></span> Main Lodge</label></div>
+      </div>
+      <div class='row'>
+        <div class='four columns'>
+          <div class='row'>
+            <div class='four columns'>
+              <label class='inline right'>Arrival Time</label>
+            </div>
+            <div class='eight columns'>
+              <div class="row collapse">
+                <div class="eight mobile-three columns">
+                  <input type="text">
+                </div>
+                <div class="four mobile-one columns"class="support tag close">
+                  <span class="postfix">AM/PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='four columns'>
+          <div class='row'>
+            <div class='four columns'>
+              <label class='inline right'>Departure Time</label>
+            </div>
+            <div class='eight columns'>
+              <div class="row collapse">
+                <div class="eight mobile-three columns">
+                  <input type="text">
+                </div>
+                <div class="four mobile-one columns"class="support tag close">
+                  <span class="postfix">AM/PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </fieldset>
+   </form>
+</div></div>
 	<!-- Included JS Files (Uncompressed) -->
 	<script src="javascripts/foundation/jquery.js"></script>
-	
 	<script src="javascripts/foundation/jquery.cookie.js"></script>
-	
 	<script src="javascripts/foundation/jquery.event.move.js"></script>
-	
 	<script src="javascripts/foundation/jquery.event.swipe.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.clearing.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.forms.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.joyride.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.magellan.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
-	
 	<script src="javascripts/foundation/jquery.foundation.topbar.js"></script>
-	
 	<script src="javascripts/foundation/jquery.placeholder.js"></script>
-	
 
   <!-- Application Javascript, safe to override -->
   <script src="javascripts/foundation/app.js"></script>

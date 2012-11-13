@@ -35,4 +35,26 @@
     });
   }
 
+  //var d = $('#estnumbers').val();
+  //if (d < 40) {
+
+  //}
+  $('#estnumbers').change(function() {
+    var d = $(this).val();
+    if (isNumber(d)){
+      if(d >= 100 && d <= 188){
+        //$('#radio1').attr('disabled','disabled');
+        //$('#radio2').prop('disabled',true);
+        $('#radio1').parent().hide();
+        console.log('change now');
+      }
+    } else {
+      alert('this is not a number');
+    }
+  });
+
+  function isNumber(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+  }
+
 })(jQuery, this);
