@@ -94,7 +94,8 @@
     return !isNaN(parseFloat(n)) && isFinite(n);
   }
   
-  $('.datepicker').datepicker()
+  //$('#dp1').datepicker()
+  $( "#datepicker" ).datepicker();
 
   $('#calendar').fullCalendar({
     events: [
