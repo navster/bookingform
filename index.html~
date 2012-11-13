@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>Welcome to Foundation</title>
+
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="stylesheets/app.css">
+
+	<script src="javascripts/foundation/modernizr.foundation.js"></script>
+
+</head>
+<body>
+
+	<div class="row">
+		<div class="twelve columns">
+			<h2>Welcome to Foundation</h2>
+		</div>
+	</div>
+
+<div class='row'><div class='twelve columns'>
+  <form class="custom">
+    <fieldset>
+      <legend>Group Details</legend>
+      <div class='row'>
+        <div class='six columns'>
+          <label>Name of Group</label>
+          <input type='text' class='twelve' />
+        </div>
+        <div class='six columns'>
+          <label>Name of organiser</label>
+          <input type='text' class='twelve' />
+        </div>
+      </div>
+      <div class='row'>
+        <div class='six columns'>
+          <label>Phone</label>
+          <input type='text' class='twelve' />
+        </div>
+        <div class='six columns'>
+          <label>Fax</label>
+          <input type='text' class='twelve' />
+        </div>
+      </div>
+      <div class='row'>
+        <div class='twelve columns'>
+          <label>Address</label>
+          <input type='text' class='twelve' />
+        </div>
+      </div>
+      <div class='row'>
+        <div class='six columns'>
+          <label>Mobile</label>
+          <input type='text' class='twelve' />
+        </div>
+        <div class='six columns'>
+          <label>Email</label>
+          <input type='text' class='twelve'
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>School Details</legend>
+
+    <div class="row">
+      <div class="six columns">
+          <label>School Name</label>
+          <input type="text">
+      </div>
+      <div class="six columns">
+          <label>School ID</label>
+          <input type="text">
+      </div>
+    </div>
+    <div class='row'>
+      <div class='six columns'
+        <!-- Custom Selects -->
+        <select style="display:none;" id="customDropdown">
+          <option SELECTED>Primary</option>
+          <option>Secondary</option>
+          <option>Intermediate</option>
+        </select>
+        <div class="custom dropdown">
+          <a href="#" class="current">
+            School Type
+          </a>
+          <a href="#" class="selector"></a>
+          <ul>
+            <li>Primary</li>
+            <li>Secondary</li>
+            <li>Intermediate</li>
+          </ul>
+        </div>
+      </div>
+      <div class='six columns'>
+        <select style="display:none;" id="customDropdown">
+          <option SELECTED>Year 8</option>
+          <option>Year 9</option>
+        </select>
+        <div class="custom dropdown">
+          <a href="#" class="current">
+            Year Group
+          </a>
+          <a href="#" class="selector"></a>
+          <ul>
+            <li>Year 8</li>
+            <li>Year 9</li>
+          </ul>
+        </div> 
+      </div>
+    </div>
+    </fieldset>
+    <fieldset>
+      <legend>Booking Details</legend>
+      <div class='row'>
+	<div class='eight columns'><label>Estimated Numbers: Note that this will affect which villages are available for booking</label>
+	</div>
+        <div class='inline left'><input id='estnumbers' type='text' class='three' /></div>
+	</div>
+	<div class='row'>
+          <div class='three columns'><label>Our group is booked into the:</label></div>
+          <div class='three columns'><label for="radio1"><input name="radio1" type="radio" id="radio1" style="display:none;"><span class="custom radio"></span> GG Village</label></div>
+          <div class='three columns'><label for="radio2"><input name="radio1" type="radio" id="radio2" style="display:none;"><span class="custom radio checked"></span> HL Village</label></div>
+          <div class='three columns'><label for="radio3"><input name="radio1" type="radio" id="radio3" style="display:none;"><span class="custom radio"></span> Main Lodge</label></div>
+      </div>
+      <div class='row'>
+        <div class='four columns'>
+              <label class='inline right'>Arrival Time</label>
+            </div>
+            <div class='eight columns'>
+              <div class="row collapse">
+                <div class="eight mobile-three columns">
+                  <input type="text">
+                </div>
+                <div class="four mobile-one columns"class="support tag close">
+                  <span class="postfix">AM/PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='four columns'>
+          <div class='row'>
+            <div class='four columns'>
+              <label class='inline right'>Departure Time</label>
+            </div>
+            <div class='eight columns'>
+              <div class="row collapse">
+                <div class="eight mobile-three columns">
+                  <input type="text">
+                </div>
+                <div class="four mobile-one columns"class="support tag close">
+                  <span class="postfix">AM/PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Booking Services</legend>
+      <div class='row'>
+          <div class='six columns'><label>Catering</label></div>
+          <div class='three columns'><label for="radio4"><input name="radio4" type="radio" id="radio4" style="display:none;"><span class="custom radio"></span> No</label></div>
+          <div class='three columns'><label for="radio5"><input name="radio5" type="radio" id="radio5" style="display:none;"><span class="custom radio checked"></span> Yes</label></div>
+      </div>
+    </fieldset>
+   </form>
+</div></div>
+	<!-- Included JS Files (Uncompressed) -->
+	<script src="javascripts/foundation/jquery.js"></script>
+	<script src="javascripts/foundation/jquery.cookie.js"></script>
+	<script src="javascripts/foundation/jquery.event.move.js"></script>
+	<script src="javascripts/foundation/jquery.event.swipe.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.clearing.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.forms.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.joyride.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.magellan.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.topbar.js"></script>
+	<script src="javascripts/foundation/jquery.placeholder.js"></script>
+
+  <!-- Application Javascript, safe to override -->
+  <script src="javascripts/foundation/app.js"></script>
+</body>
+</html>
