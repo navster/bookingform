@@ -1,74 +1,316 @@
 <!DOCTYPE html>
-<html>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Bookingform : " />
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<head>
+	<meta charset="utf-8" />
 
-    <title>Bookingform</title>
-  </head>
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
 
-  <body>
+	<title>Sample Booking Form</title>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/navster/bookingform">View on GitHub</a>
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="stylesheets/app.css">
+  <link rel='stylesheet' type='text/css' href='fullcalendar/fullcalendar/fullcalendar.css' />
+  <link rel='stylesheet' type='text/css' href='datepicker/css/datepicker.css' />
+	<script src="javascripts/foundation/modernizr.foundation.js"></script>
 
-          <h1 id="project_title">Bookingform</h1>
-          <h2 id="project_tagline"></h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/navster/bookingform/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/navster/bookingform/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+</head>
+<body>
+  <div class='row'>
+    <div class='twelve columns'>
+      <h2>Sample Booking Prototype</h2>
     </div>
+  </div>
+<div class='row'>
+  <div class='twelve columns'>
+    <form class="custom">
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+    <fieldset>
+        <legend>Group Details</legend>
+          <div class='row'>
+            <div class='six columns'>
+              <label>Name of Group</label>
+              <input type='text' class='twelve' />
+            </div>
+            <div class='six columns'>
+              <label>Name of organiser</label>
+              <input type='text' class='twelve' />
+            </div>
+          </div>
+          <div class='row'>
+            <div class='six columns'>
+              <label>Phone</label>
+              <input type='text' class='twelve' />
+            </div>
+            <div class='six columns'>
+              <label>Fax</label>
+              <input type='text' class='twelve' />
+            </div>
+          </div>
+          <div class='row'>
+            <div class='twelve columns'>
+              <label>Address</label>
+              <input type='text' class='twelve' />
+            </div>
+          </div>
+          <div class='row'>
+            <div class='six columns'>
+              <label>Mobile</label>
+              <input type='text' class='twelve' />
+            </div>
+            <div class='six columns'>
+              <label>Email</label>
+              <input type='text' class='twelve'>
+            </div>
+          </div>
+    </fieldset>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Bookingform maintained by <a href="https://github.com/navster">navster</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
+    <fieldset>
+      <legend>School Details</legend>
+        <div class="row">
+          <div class="six columns">
+            <label>School Name</label>
+            <input type="text">
+          </div>
+          <div class="six columns">
+            <label>School ID</label>
+            <input type="text">
+          </div>
+        </div>
+        <div class='row'>
+          <div class='six columns'>
+            <select style="display:none;" id="customDropdown">
+              <option SELECTED>Primary</option>
+              <option>Secondary</option>
+              <option>Intermediate</option>
+            </select>
+            <div class="custom dropdown">
+              <a href="#" class="current">School Type</a>
+              <a href="#" class="selector"></a>
+              <ul>
+                <li>Primary</li>
+                <li>Secondary</li>
+                <li>Intermediate</li>
+              </ul>
+            </div>
+          </div>
+          <div class='six columns'>
+            <select style="display:none;" id="customDropdown">
+              <option SELECTED>Year 5</option>
+              <option>Year 6</option>
+              <option>Year 7</option>
+              <option>Year 8</option>
+              <option>Year 9</option>
+              <option>Year 10</option>
+              <option>Year 11</option>
+              <option>Year 12</option>
+              <option>Year 13</option>
+            </select>
+            <div class="custom dropdown">
+              <a href="#" class="current">Year Group</a>
+              <a href="#" class="selector"></a>
+              <ul>
+                <li>Year 8</li>
+                <li>Year 9</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </fieldset>
     
+    <fieldset>
+      <legend>Booking Details</legend>
+        <div class='row'>
+          <div class='twelve columns'>
+            <label class=''>Estimated Numbers: <i>Note village options are made available according to your numbers</i></label>
+	         </div>
+        </div>
+        <div class='row'>
+          <div class='twelve columns'>
+            <input id='estnumbers' type='text' class='three' />
+          </div>
+        </div>
+        <div class='row'>
+          <div class='three columns'><label>Our group is booked into the:</label></div>
+          <div class='two columns'><label for="radio1"><input name="radio1" type="radio" id="radio1" style="display:none;"><span class="custom radio"></span> GG Village</label></div>
+          <div class='two columns'><label for="radio2"><input name="radio1" type="radio" id="radio2" style="display:none;"><span class="custom radio checked"></span> HL Village</label></div>
+          <div class='two columns end'><label for="radio3"><input name="radio1" type="radio" id="radio3" style="display:none;"><span class="custom radio"></span> Main Lodge</label></div>
+        </div>
+        <br/>
+        <div class='row'>
+          <div class='five columns'>
+            <div class='row'>
+              <div class='four columns'>
+                <label class='inline right'>Arrival Time</label>
+              </div>
+              <div class='eight columns'>
+                <div class="row collapse">
+                  <div class="eight mobile-three columns">
+                    <input type="text">
+                  </div>
+                  <div class="four mobile-one columns"class="support tag close">
+                    <span class="postfix">AM/PM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='five columns'>
+            <div class='row'>
+              <div class='four columns'>
+                <label class='inline right'>Departure Time</label>
+              </div>
+              <div class='eight columns'>
+                <div class="row collapse">
+                  <div class="eight mobile-three columns">
+                    <input type="text">
+                  </div>
+                  <div class="four mobile-one columns"class="support tag close">
+                    <span class="postfix">AM/PM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </fieldset>
+    
+    <fieldset>
+      <legend>Terms and conditions</legend>
+      <div class='row'>
+        <div class='twelve columns'>
+          <h5 class='subheader'>The following links contain information relevant to your application. Please view before continuing</h5>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='twelve columns'>
+          <p><a class="secondary small radius button" data-reveal-id="modal1" href="#">Terms and conditions</a>&nbsp;<a class="secondary small radius button" data-reveal-id="modal2" href="#">Health and Safety</a>&nbsp;<a class="secondary small radius button" id='modal3' href="#">View available days</a></p>
+        <div>
+      </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='twelve columns'>
+        <label for="checkbox1"><input type="checkbox" id="checkbox1" style="display: none; "><span class="custom checkbox checked"></span> Do you agree to the terms and conditions?</label> 
+        <br/>      
+        </div>
+      </div>
+      <div class='row'>
+        <div class='twelve columns'>
+        <label for="checkbox2"><input type="checkbox" id="checkbox2" style="display: none; "><span class="custom checkbox checked"></span> If you wish to consume alcohol on the premises you must agree to the health and safety conditions.</label> 
+        <br/>      
+        </div>
+      </div>      
+    </fieldset>
 
-  </body>
+    <fieldset id='extras' style='display:none;'>
+      <legend>Booking Services</legend>
+        <div class='row'>
+          <div class='six columns'>
+            <div class='row'>
+              <div class='two columns'><label>Catering:</label></div>
+              <div class='two columns'><label for="radio1"><input name="radio1" type="radio" id="radio1" style="display:none;"><span class="custom radio"></span> Yes</label></div>
+              <div class='two columns end'><label for="radio2"><input name="radio1" type="radio" id="radio2" style="display:none;"><span class="custom radio checked"></span> No</label></div>
+            </div>
+            <br/>
+            <div class='row'>
+              <div class='two columns'><label>Firewood</label></div>
+              <div class='two columns'><label for="radio1"><input name="radio1" type="radio" id="radio1" style="display:none;"><span class="custom radio"></span> Yes</label></div>
+              <div class='two columns end'><label for="radio2"><input name="radio1" type="radio" id="radio2" style="display:none;"><span class="custom radio checked"></span> No</label></div>
+            </div>
+            <br/>
+            <div class='row'>
+              <div class='two columns'><label>BBQ</label></div>
+              <div class='two columns'><label for="radio1"><input name="radio1" type="radio" id="radio1" style="display:none;"><span class="custom radio"></span> Yes</label></div>
+              <div class='two columns end'><label for="radio2"><input name="radio1" type="radio" id="radio2" style="display:none;"><span class="custom radio checked"></span> No</label></div>
+            </div>
+            <br/>                         
+          </div>
+          <div class='six columns'>
+            <div class='row'>
+              <div class='two columns'><label>Instruction:</label></div>
+              <div class='two columns'><label for="radio1"><input name="radio1" type="radio" id="radio1" style="display:none;"><span class="custom radio"></span> Yes</label></div>
+              <div class='two columns end'><label for="radio2"><input name="radio1" type="radio" id="radio2" style="display:none;"><span class="custom radio checked"></span> No</label></div>
+            </div>
+            <br/>
+            <div class='row'>
+              <div class='two columns'><label>Alcohol</label></div>
+              <div class='two columns'><label for="radio1"><input name="radio1" type="radio" id="radio1" style="display:none;"><span class="custom radio"></span> Yes</label></div>
+              <div class='two columns end'><label for="radio2"><input name="radio1" type="radio" id="radio2" style="display:none;"><span class="custom radio checked"></span> No</label></div>
+            </div>
+            <br/>                       
+          </div>          
+        </div>
+    </fieldset>
+    <div class='row'>
+      <div class='six columns'>
+        <div id='calendar'></div>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='three columns offset-by-nine'>
+        <a class="radius button secondary right" href="#">Submit your application</a>
+      </div>
+    </div>
+   </form>
+
+  </div>
+</div>
+ <div id="modal1" class="reveal-modal expand">
+    <h1 class='subheader'>Terms and Conditions</h1>
+    <p class="lead">Lorem ipsum dolor sit amet</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet arcu in purus gravida feugiat. Mauris aliquam vehicula laoreet. Donec placerat felis eu sapien gravida a feugiat felis lobortis. Praesent non arcu eget dui pellentesque molestie. Nam elementum, risus porta pharetra sagittis, nibh magna fermentum felis, sed viverra mauris nisi non dolor. Mauris non nulla tortor. Maecenas porta libero at odio sagittis vitae vulputate eros pulvinar.</p>
+    <p>Sed non tellus id dolor tristique venenatis eget eu felis. Fusce luctus eros at nisl malesuada vitae pellentesque nisi placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In sed massa ac elit aliquet viverra. Nulla volutpat felis ut nunc gravida sodales. Nullam vitae nisi lorem, non adipiscing lectus. In tortor dolor, malesuada vel molestie non, blandit eget nisi. Nulla condimentum justo ac ipsum egestas elementum. Donec convallis mauris at urna pretium in sodales felis gravida.</p>
+    <p>Quisque adipiscing dolor eu lacus gravida vitae commodo augue blandit. Mauris malesuada ultricies ullamcorper. Pellentesque ac sollicitudin ligula. Quisque in sem nisi. Quisque diam nisl</p>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+
+  <div id="modal2" class="reveal-modal expand">
+    <h1 class='subheader'>Health and Safety</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet arcu in purus gravida feugiat. Mauris aliquam vehicula laoreet. Donec placerat felis eu sapien gravida a feugiat felis lobortis. Praesent non arcu eget dui pellentesque molestie. Nam elementum, risus porta pharetra sagittis, nibh magna fermentum felis, sed viverra mauris nisi non dolor. Mauris non nulla tortor. Maecenas porta libero at odio sagittis vitae vulputate eros pulvinar.</p>
+    <p>Sed non tellus id dolor tristique venenatis eget eu felis. Fusce luctus eros at nisl malesuada vitae pellentesque nisi placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In sed massa ac elit aliquet viverra. Nulla volutpat felis ut nunc gravida sodales. Nullam vitae nisi lorem, non adipiscing lectus. In tortor dolor, malesuada vel molestie non, blandit eget nisi. Nulla condimentum justo ac ipsum egestas elementum. Donec convallis mauris at urna pretium in sodales felis gravida.</p>
+    <p>Quisque adipiscing dolor eu lacus gravida vitae commodo augue blandit. Mauris malesuada ultricies ullamcorper. Pellentesque ac sollicitudin ligula. Quisque in sem nisi. Quisque diam nisl</p>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+    <div id="modal3box" class="reveal-modal large">
+      <h1 class='subheader'>Availability</h1>
+      
+          <div id='calendar2'>Quisque adipiscing dolor eu lacus gravida vitae commodo augue blandit. Mauris malesuada ultricies ullamcorper. Pellentesque ac sollicitudin ligula. Quisque in sem nisi. Quisque diam nisl</div>
+      
+      
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+
+	<!-- Included JS Files (Uncompressed) -->
+	<script src="javascripts/foundation/jquery.js"></script>
+	<script src="javascripts/foundation/jquery.cookie.js"></script>
+	<script src="javascripts/foundation/jquery.event.move.js"></script>
+	<script src="javascripts/foundation/jquery.event.swipe.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.clearing.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.forms.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.joyride.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.magellan.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.mediaQueryToggle.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
+	<script src="javascripts/foundation/jquery.foundation.topbar.js"></script>
+	<script src="javascripts/foundation/jquery.placeholder.js"></script>
+
+  <!-- Application Javascript, safe to override -->
+  <script type='text/javascript' src='fullcalendar/fullcalendar/fullcalendar.js'></script>
+  <script type='text/javascript' src='javascripts/jquery-ui-1.9.1.custom.js'></script>
+  <script src="javascripts/foundation/app.js"></script>
+</body>
 </html>
