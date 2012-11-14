@@ -105,23 +105,46 @@
     }
   });
 
-  $('#calendar').fullCalendar({
+  $("a#modal3").click(function() {
+    $("#modal3box").reveal({
+      animation: 'fade',
+      open: function(){
+$('#calendar2').fullCalendar({
+eventSources: [
+  {
     events: [
         {
-            title  : 'Unavailable',
+            title  : '',
             start  : '2012-11-16'
         },
         {
-            title  : 'Unavailable',
-            start  : '2012-11-05',
-            end    : '2012-11-07'
+            title  : '',
+            start  : '2012-11-05 12:30:00',
+            end    : '2012-11-10 19:30:00',
+            allDay : true
         },
         {
-            title  : 'seminar',
+            title  : '',
             start  : '2012-11-15 12:30:00',
-            allDay : false // will make the time show
-        }
-    ]
+            allDay : true // will make the time show
+        },
+        {
+            title  : '',
+            start  : '2012-11-23 12:30:00',
+            allDay : true // will make the time show
+        }            
+    ],
+    color: 'red',     // an option!
+    textColor: 'white'
+  }
+]
 });
+      },
+      close: function(){
+        $('#calendar2').fullCalendar('destroy');
+      }
+    });
+  });
+
 
 })(jQuery, this);

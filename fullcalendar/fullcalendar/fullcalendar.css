@@ -60,8 +60,10 @@ html .fc,
 	}
 	
 .fc-header-title h2 {
-	margin-top: 0;
+	margin-top: 5px;
+	margin-left: 2px;
 	white-space: nowrap;
+	font-size: 17px;
 	}
 	
 .fc .fc-header-space {
