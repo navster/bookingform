@@ -97,6 +97,14 @@
   //$('#dp1').datepicker()
   $( "#datepicker" ).datepicker();
 
+  $('#checkbox2').change(function() {
+    if($(this).is(':checked')){
+      $('fieldset#extras').fadeIn();
+    } else {
+      $('fieldset#extras').fadeOut();
+    }
+  });
+
   $('#calendar').fullCalendar({
     events: [
         {
